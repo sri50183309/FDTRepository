@@ -29,6 +29,8 @@ public class SampleController {
 
     public Label lblJarFileLocation;
     public TextField jarFileLocation;
+    public Label lblParameter;
+    public TextField passThroughParameter;
 
 
     String FDT_JAR_LOCATION = "FDT Jar file location";
@@ -53,17 +55,17 @@ public class SampleController {
         lblserverIpAddress.setText(SERVER_IP_ADDRESS);
         String serverIpAddressText = serverIpAddress.getText();
 
-
         lblSourceFile.setText(SOURCE_FILE);
         String sourceFileLocationText = sourceFileLocation.getText();
-
 
         lblDestinationFile.setText(DESTINATION_FOLDER);
         String destinationDirectoryText = destinationDirectory.getText();
 
-        String commandString = "java -jar " + jarFile + " -c " + serverIpAddressText + " " + sourceFileLocationText + " -d " + destinationDirectoryText;
+        String parameterP = passThroughParameter.getText();
 
-        fileTransferInitiated.setText("File transfer Initiated !! Please wait........................" + commandString);
+        String commandString = "java -jar " + jarFile + " -c " + serverIpAddressText + " -P "+ parameterP+" " + sourceFileLocationText + " -d " + destinationDirectoryText;
+
+        //fileTransferInitiated.setText("File transfer Initiated !! Please wait........................" + commandString);
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
@@ -82,6 +84,10 @@ public class SampleController {
                             InputStreamReader(p.getErrorStream()));
 
                     // read the output from the command
+                    stringBuffer.append(" Command String : \n");
+                    stringBuffer.append(commandString);
+                    stringBuffer.append(" \n \n");
+
                     stringBuffer.append("Here is the standard output of the command:\n");
                     while ((s = stdInput.readLine()) != null) {
                         stringBuffer.append(s);
@@ -96,7 +102,7 @@ public class SampleController {
 
                     fileTransferCompleted.setText(stringBuffer.toString());
                 } catch (Exception e) {
-                    fileTransferInitiated.setText("exception happened - here's what I know: ");
+                    fileTransferCompleted.setText("exception happened - here's what I know: ");
                     e.printStackTrace();
 
                 }
