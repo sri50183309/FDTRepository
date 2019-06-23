@@ -36,7 +36,7 @@ public class SampleController {
     String FDT_JAR_LOCATION = "FDT Jar file location";
     String DESTINATION_FOLDER = "Destination folder";
     String SERVER_IP_ADDRESS = "Remote Server IP Address";
-    String SOURCE_FILE = "Files to be trasnferred";
+    String SOURCE_FILE = "Files to be transferred";
 
     @FXML protected void locateFile(ActionEvent event) {
         FileChooser chooser = new FileChooser();
