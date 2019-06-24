@@ -21,7 +21,7 @@
     <Label fx:id="lblDestinationFile" text="Destination folder" GridPane.rowIndex="6" />
     <TextField fx:id="destinationDirectory" GridPane.columnIndex="1" GridPane.rowIndex="6" />
 
-    <Label fx:id="lblParameter" text="Parameter P" GridPane.rowIndex="7" />
+    <Label fx:id="lblParameter" text=" Parallel Thread Count" GridPane.rowIndex="7" />
     <TextField fx:id="passThroughParameter" text="4" GridPane.columnIndex="1" GridPane.rowIndex="7" />
 
     <Button onAction="#sayHelloWorld" text="Start File Transfer" GridPane.columnSpan="4" GridPane.rowIndex="8" />
