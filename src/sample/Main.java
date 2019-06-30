@@ -17,12 +17,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("FDT File Transfer");
 
-        FileChooser fileChooser = new FileChooser();
 
-        Button button = new Button("Select File");
-        button.setOnAction(e -> {
-            File selectedFile = fileChooser.showOpenDialog(primaryStage);
-        });
 
 
 

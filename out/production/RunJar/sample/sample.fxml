@@ -25,11 +25,13 @@
     <TextField fx:id="passThroughParameter" text="4" GridPane.columnIndex="1" GridPane.rowIndex="7" />
 
     <Button onAction="#sayHelloWorld" text="Start File Transfer" GridPane.columnSpan="4" GridPane.rowIndex="8" />
-    <Label fx:id="fileTransferInitiated" GridPane.columnSpan="4" GridPane.rowIndex="9"  />
+    <Label fx:id="fileTransferInitiated" GridPane.columnSpan="4" GridPane.rowIndex="9" />
     <TextArea fx:id="fileTransferCompleted" GridPane.columnSpan="4" GridPane.rowIndex="10" />
 
     <Label fx:id="lblFDTFileTransfer" text="FDT File Transfer tool" GridPane.columnSpan="4" GridPane.rowIndex="0" />
+   <Button  onAction="#sayUploadFile" mnemonicParsing="false" text="Upload File" GridPane.columnIndex="2" GridPane.rowIndex="5" />
    <columnConstraints>
+      <ColumnConstraints />
       <ColumnConstraints />
       <ColumnConstraints />
       <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
