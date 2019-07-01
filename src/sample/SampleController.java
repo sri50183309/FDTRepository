@@ -65,7 +65,7 @@ public class SampleController {
 
         String parameterP = passThroughParameter.getText();
 
-        String commandString = "java -jar " + jarFile + " -c " + serverIpAddressText + " -P " + parameterP + " " + sourceFileLocationText + " -d " + destinationDirectoryText;
+        String commandString = "java -jar " + jarFile + " -c " + serverIpAddressText + " -P " + parameterP + " \"" + sourceFileLocationText + "\" -d " + destinationDirectoryText;
 
         //fileTransferInitiated.setText("File transfer Initiated !! Please wait........................" + commandString);
         Platform.runLater(new Runnable() {
