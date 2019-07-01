@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JavaFXApp.jnlp">
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="FDTGui.jnlp">
   <information>
-    <title>JavaFXApp</title>
+    <title>FDT GUI</title>
     <vendor>Unknown</vendor>
-    <description>JavaFXApp</description>
+    <description>FDT GUI</description>
     <offline-allowed/>
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="JavaFXApp.jar" size="5611" download="eager" />
+    <jar href="FDTGui.jar" size="16238" download="eager" />
   </resources>
 <security>
   <all-permissions/>
 </security>
-  <jfx:javafx-desc  width="600" height="400" main-class="sample.Main"  name="JavaFXApp" />
+  <jfx:javafx-desc  width="600" height="400" main-class="sample.Main"  name="FDT GUI" />
   <update check="background"/>
 </jnlp>
