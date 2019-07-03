@@ -33,11 +33,6 @@ public class SampleController {
     public TextField passThroughParameter;
 
 
-    String FDT_JAR_LOCATION = "FDT Jar file location";
-    String DESTINATION_FOLDER = "Destination folder";
-    String SERVER_IP_ADDRESS = "Remote Server IP Address";
-    String SOURCE_FILE = "Files to be transferred";
-
     @FXML
     protected void locateFile(ActionEvent event) {
         FileChooser chooser = new FileChooser();
@@ -50,19 +45,10 @@ public class SampleController {
 
         StringBuffer stringBuffer = new StringBuffer();
 
-        lblJarFileLocation.setText(FDT_JAR_LOCATION);
         String jarFile = jarFileLocation.getText();
-
-
-        lblserverIpAddress.setText(SERVER_IP_ADDRESS);
         String serverIpAddressText = serverIpAddress.getText();
-
-        lblSourceFile.setText(SOURCE_FILE);
         String sourceFileLocationText = sourceFileLocation.getText();
-
-        lblDestinationFile.setText(DESTINATION_FOLDER);
         String destinationDirectoryText = destinationDirectory.getText();
-
         String parameterP = passThroughParameter.getText();
 
         String commandString = "java -jar " + jarFile + " -c " + serverIpAddressText + " -P " + parameterP + " \"" + sourceFileLocationText + "\" -d " + destinationDirectoryText;
